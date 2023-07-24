@@ -43,7 +43,7 @@
         var m = ua.match(/MicroMessenger/i)
         console.warn(m && m[0] === 'micromessenger')
 
-        if (isWeixin) {
+       // if (isWeixin) {
           var containerEl = document.getElementById('wechat-web-container')
           containerEl.classList.remove('hidden')
           containerEl.classList.add('full', 'wechat-web-container')
@@ -68,7 +68,8 @@
             jsApiList: ['chooseImage'], // 安卓上必填一个，随机即可
             openTagList:['wx-open-launch-weapp'], // 填入打开小程序的开放标签名
           })
-        } else if (isDesktop) {
+       /* } else 
+               if (isDesktop) {
           // 在 pc 上则给提示引导到手机端打开
           var containerEl = document.getElementById('desktop-web-container')
           containerEl.classList.remove('hidden')
@@ -101,6 +102,7 @@
             throw e
           }
         }
+        */
       })
 
       async function openWeapp(onBeforeJump) {
